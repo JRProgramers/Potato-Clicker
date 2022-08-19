@@ -28,13 +28,13 @@
             var cursors = 0;
 
             function buyCursor() {
-                if (score >= cursorcost) {
+                if (score >= cursorCost) {
                     score = score - cursorCost;
                     cursors = cursors + 1;
                     cursorCost = Math.round(cursorcost * 1.15);
 
                     document.getElementById("score").innerHTML = score;
-                    document.getElementById("cursorCost").innerHTML = cursorCost;
+                    document.getElementById("cursorcost").innerHTML = cursorCost;
                     document.getElementById("cursors").innerHTML = cursors;
                 }
             }
