@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <center>
+            <title>
+                Potato Clicker
+            </title>
+            <h1>
+                Potato Clicker
+            </h1>
+            <hr>
+    </head>
+    <body>
+        <h2>
+            Score:<span id="score">0</span>
+        </h2>
+        <style>
+            body{
+                background-color: lightslategrey;
+            }
+        </style>
+        <script>
+            var score = 0;
+
+            var cursorcost = 15;
+            var cursors = 0;
+
+            function buyCursor() {
+                if (score >= cursorcost) {
+                    score = score - cursorCost;
+                    cursors = cursors + 1;
+                    cursorCost = Math.round(cursorcost * 1.15);
+
+                    document.getElementById("score").innerHTML = score;
+                    document.getElementById("cursorCost").innerHTML = cursorCost;
+                    document.getElementById("cursors").innerHTML = cursors;
+                }
+            }
+
+            function addToScore(amount) {
+                score = score + amount;
+                document.getElementById("score").innerHTML = score;
+            }
+        </script>
+        <img src="Potato.png" alt="Potato" onclick="addToScore(1)">
+        <button onclick="buyCursor()">Cursor [<span id="cursorcost">15</span>] -- <span id="cursors">0</span></button>
+        </center>
+    </body>
+</html>
