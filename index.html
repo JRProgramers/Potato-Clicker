@@ -64,6 +64,20 @@
                     right: 100px;
                     top: 270px;
                 }
+
+                .cultivator button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 300px;
+                }
+
+                .harvester button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 330px;
+                }
             </style>
             <script>
                 var score = 0;
@@ -85,6 +99,12 @@
 
                 var cropSprayerCost = 500;
                 var cropSprayers = 0;
+
+                var cultivatorCost = 800;
+                var cultivators = 0;
+
+                var harvesterCost = 1000;
+                var harvesters = 0;
 
                 function buyFarmer() {
                     if (score >= farmerCost) {
@@ -158,6 +178,30 @@
                     }
                 }
 
+                function buyCultivator() {
+                    if (score >= cultivatorCost) {
+                        score = score - cultivatorCost;
+                        cultivators = cultivators + 1;
+                        cultivatorCost = Math.round(cultivatorCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("cultivatorcost").innerHTML = cultivatorCost;
+                        document.getElementById("cultivators").innerHTML = cultivators;
+                    }
+                }
+
+                function buyHarvester() {
+                    if (score >= harvesterCost) {
+                        score = score - harvesterCost;
+                        harvesters = harvesters + 1;
+                        harvesterCost = Math.round(harvesterCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("harvestercost").innerHTML = harvesterCost;
+                        document.getElementById("harvesters").innerHTML = harvesters;
+                    }
+                }
+
                 function addToScore(amount) {
                     score = score + amount;
                     document.getElementById("score").innerHTML = score;
@@ -192,6 +236,16 @@
                     score = score + cropSprayers * 30;
                     document.getElementById("score").innerHTML = score;
                 }, 1000); //1000ms = 1 second
+
+                setInterval(function() {
+                    score = score + cultivators * 40;
+                    document.getElementById("score").innerHTML = score;
+                }, 1000); //1000ms = 1 second
+
+                setInterval(function() {
+                    score = score + harvesters * 50;
+                    document.getElementById("score").innerHTML = score;
+                }, 1000); //1000ms = 1 second
             </script>
             <img src="Potato.png" alt="Potato" onclick="addToScore(1)" />
             <div class="farmer">
@@ -211,6 +265,12 @@
             </div>
             <div class="cropSprayer">
                 <button onclick="buyCropSprayer()">Crop Sprayer [<span id="cropsprayercost">500</span>] -- <span id="cropsprayers">0</span></button>
+            </div>
+            <div class="cultivator">
+                <button onclick="buyCultivator()">Cultivator [<span id="cultivatorcost">800</span>] -- <span id="cultivators">0</span></button>
+            </div>
+            <div class="harvester">
+                <button onclick="buyHarvester()">Harvester [<span id="harvestercost">1000</span>] -- <span id="harvesters">0</span></button>
             </div>
         </center>
     </body>
