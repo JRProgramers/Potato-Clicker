@@ -142,7 +142,7 @@
                     if (score >= farmerCost) {
                         score = score - farmerCost;
                         farmers = farmers + 1;
-                        farmerCost = Math.round(farmerCost * 1.15);
+                        farmerCost = Math.round(farmerCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("farmercost").innerHTML = farmerCost;
@@ -154,7 +154,7 @@
                     if (score >= trowelCost) {
                         score = score - trowelCost;
                         trowels = trowels + 1;
-                        trowelCost = Math.round(trowelCost * 1.15);
+                        trowelCost = Math.round(trowelCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("trowelcost").innerHTML = trowelCost;
@@ -166,7 +166,7 @@
                     if (score >= shovelCost) {
                         score = score - shovelCost;
                         shovels = shovels + 1;
-                        shovelCost = Math.round(shovelCost * 1.15);
+                        shovelCost = Math.round(shovelCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("shovelcost").innerHTML = shovelCost;
@@ -178,7 +178,7 @@
                     if (score >= hoeCost) {
                         score = score - hoeCost;
                         hoes = hoes + 1;
-                        hoeCost = Math.round(hoeCost * 1.15);
+                        hoeCost = Math.round(hoeCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("hoecost").innerHTML = hoeCost;
@@ -190,7 +190,7 @@
                     if (score >= tractorCost) {
                         score = score - tractorCost;
                         tractors = tractors + 1;
-                        tractorCost = Math.round(tractorCost * 1.15);
+                        tractorCost = Math.round(tractorCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("tractorcost").innerHTML = tractorCost;
@@ -202,7 +202,7 @@
                     if (score >= cropSprayerCost) {
                         score = score - cropSprayerCost;
                         cropSprayers = cropSprayers + 1;
-                        cropSprayerCost = Math.round(cropSprayerCost * 1.15);
+                        cropSprayerCost = Math.round(cropSprayerCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("cropsprayercost").innerHTML = cropSprayerCost;
@@ -214,7 +214,7 @@
                     if (score >= cultivatorCost) {
                         score = score - cultivatorCost;
                         cultivators = cultivators + 1;
-                        cultivatorCost = Math.round(cultivatorCost * 1.15);
+                        cultivatorCost = Math.round(cultivatorCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("cultivatorcost").innerHTML = cultivatorCost;
@@ -226,7 +226,7 @@
                     if (score >= harvesterCost) {
                         score = score - harvesterCost;
                         harvesters = harvesters + 1;
-                        harvesterCost = Math.round(harvesterCost * 1.15);
+                        harvesterCost = Math.round(harvesterCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("harvestercost").innerHTML = harvesterCost;
@@ -239,7 +239,7 @@
                     if (score >= fieldCost) {
                         score = score - fieldCost;
                         fields = fields + 1;
-                        fieldCost = Math.round(fieldCost * 1.15);
+                        fieldCost = Math.round(fieldCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("fieldcost").innerHTML = fieldCost;
@@ -251,7 +251,7 @@
                     if(score >= idahoCost) {
                         score = score - idahoCost;
                         idahos = idahos + 1;
-                        idahoCost = Math.round(idahoCost * 1.15);
+                        idahoCost = Math.round(idahoCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("idahocost").innerHTML = idahoCost;
@@ -263,7 +263,7 @@
                     if(score >= irelandCost) {
                         score = score - irelandCost;
                         irelands = irelands + 1;
-                        irelandCost = Math.round(irelandCost * 1.15);
+                        irelandCost = Math.round(irelandCost * 1.5);
 
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("irelandcost").innerHTML = irelandCost;
@@ -274,6 +274,7 @@
                 function addToScore(amount) {
                     score = score + amount;
                     document.getElementById("score").innerHTML = score;
+                    wait(1)
                 }
 
                 setInterval(function() {
