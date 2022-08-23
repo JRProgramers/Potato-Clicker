@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+            <title>
+                Potato Clicker
+            </title>
+           
+    </head>
+    <body>
+        <center>
+            <h1>
+                Potato Clicker
+            </h1>
+            <hr>
+            <h2>
+                <span id="score">0</span> Potatoes <br>
+                <span id="scorepersecond">0</span> Potatoes Per Second
+            </h2>
+
+            <div class="sectionRight">
+                <table class="shopButton" onclick="buyFarmer()">
+                    <tr>
+                        <td id="image"><img src="farmer.png" alt="farmer"></td>
+                        <td id="nameAndCost">
+                            <p>Farmer</p>
+                            <p><span id="farmercost">15</span> Potatoes</p>
+                        </td>
+                        <td id="amount"><span id="farmers">0</span></td>
+                    </tr>
+                </table>
+            </div>
+            <style>
+                body{
+                    background-color: slategrey;
+                }
+
+                .sectionRight{
+                    right: 100px;
+                    top: 120px;
+                    width: 20%;
+                }
+
+                .shopButton{
+                    background-color: lightslategrey;
+                    transition: all .2s ease-in-out;
+                    border-radius: 10px;
+                    width: 100%;
+                    margin: 10px 0px 10px 0px;
+                }
+
+                .shopButton hover{
+                    background-color: lightgrey;
+                    transition: all ease-in-out;
+                }
+
+                .shopButton #image{
+                    width: 25%;
+                }
+
+                .shopButton img{
+                    height: 64px;
+                    width: 64px;
+                }
+
+                .shopButton #nameAndCost p{
+                    margin: 0px;
+                    width: 60%;
+                }
+
+                .shopButton #nameAndCost p:first-of-type{
+                    font-size: 24px;
+                }
+
+                .shopButton #amount{
+                    font-size: 48px;
+                    color: #595959;
+                    font-family: roboto;
+                    width: 15%;
+                }
+           
+                .farmer button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 120px;
+                }
+           
+                 .trowel button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 150px;
+                }
+
+                .shovel button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 180px;
+                }
+           
+                .hoe button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 210px;
+                }
+           
+                .tractor button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 240px;
+                }
+           
+                .cropSprayer button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 270px;
+                }
+
+                .cultivator button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 300px;
+                }
+
+                .harvester button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    right: 100px;
+                    top: 330px;
+                }
+
+
+                .field button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    left: 100px;
+                    top: 120px;
+                }
+
+                .idaho button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    left: 100px;
+                    top: 150px;
+                }
+
+                .ireland button{
+                    background-color: darkgoldenrod;
+                    position: absolute;
+                    left: 100px;
+                    top: 180px;
+                }
+            </style>
+            <script>
+                var score = 0;
+
+                var farmerCost = 15;
+                var farmers = 0;
+
+                var trowelCost = 50;
+                var trowels = 0;
+
+                var shovelCost = 100;
+                var shovels = 0;
+
+                var hoeCost = 200;
+                var hoes = 0;
+
+                var tractorCost = 350;
+                var tractors = 0;
+
+                var cropSprayerCost = 500;
+                var cropSprayers = 0;
+
+                var cultivatorCost = 800;
+                var cultivators = 0;
+
+                var harvesterCost = 1000;
+                var harvesters = 0;
+
+
+                var fieldCost = 10000;
+                var fields = 0;
+
+                var idahoCost = 50000;
+                var idahos = 0;
+
+                var irelandCost = 100000;
+                var irelands = 0;
+
+                function buyFarmer() {
+                    if (score >= farmerCost) {
+                        score = score - farmerCost;
+                        farmers = farmers + 1;
+                        farmerCost = Math.round(farmerCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("farmercost").innerHTML = farmerCost;
+                        document.getElementById("farmers").innerHTML = farmers;
+                        updateScorePerSecond();
+                    }
+                }
+           
+                function buyTrowel() {
+                    if (score >= trowelCost) {
+                        score = score - trowelCost;
+                        trowels = trowels + 1;
+                        trowelCost = Math.round(trowelCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("trowelcost").innerHTML = trowelCost;
+                        document.getElementById("trowels").innerHTML = trowels;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyShovel() {
+                    if (score >= shovelCost) {
+                        score = score - shovelCost;
+                        shovels = shovels + 1;
+                        shovelCost = Math.round(shovelCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("shovelcost").innerHTML = shovelCost;
+                        document.getElementById("shovels").innerHTML = shovels;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyHoe() {
+                    if (score >= hoeCost) {
+                        score = score - hoeCost;
+                        hoes = hoes + 1;
+                        hoeCost = Math.round(hoeCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("hoecost").innerHTML = hoeCost;
+                        document.getElementById("hoes").innerHTML = hoes;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyTractor() {
+                    if (score >= tractorCost) {
+                        score = score - tractorCost;
+                        tractors = tractors + 1;
+                        tractorCost = Math.round(tractorCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("tractorcost").innerHTML = tractorCost;
+                        document.getElementById("tractors").innerHTML = tractors;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyCropSprayer() {
+                    if (score >= cropSprayerCost) {
+                        score = score - cropSprayerCost;
+                        cropSprayers = cropSprayers + 1;
+                        cropSprayerCost = Math.round(cropSprayerCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("cropsprayercost").innerHTML = cropSprayerCost;
+                        document.getElementById("cropsprayers").innerHTML = cropSprayers;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyCultivator() {
+                    if (score >= cultivatorCost) {
+                        score = score - cultivatorCost;
+                        cultivators = cultivators + 1;
+                        cultivatorCost = Math.round(cultivatorCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("cultivatorcost").innerHTML = cultivatorCost;
+                        document.getElementById("cultivators").innerHTML = cultivators;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyHarvester() {
+                    if (score >= harvesterCost) {
+                        score = score - harvesterCost;
+                        harvesters = harvesters + 1;
+                        harvesterCost = Math.round(harvesterCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("harvestercost").innerHTML = harvesterCost;
+                        document.getElementById("harvesters").innerHTML = harvesters;
+                        updateScorePerSecond();
+                    }
+                }
+
+
+                function buyField() {
+                    if (score >= fieldCost) {
+                        score = score - fieldCost;
+                        fields = fields + 1;
+                        fieldCost = Math.round(fieldCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("fieldcost").innerHTML = fieldCost;
+                        document.getElementById("fields").innerHTML = fields;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyIdaho() {
+                    if(score >= idahoCost) {
+                        score = score - idahoCost;
+                        idahos = idahos + 1;
+                        idahoCost = Math.round(idahoCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("idahocost").innerHTML = idahoCost;
+                        document.getElementById("idahos").innerHTML = idahos;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function buyIreland() {
+                    if(score >= irelandCost) {
+                        score = score - irelandCost;
+                        irelands = irelands + 1;
+                        irelandCost = Math.round(irelandCost * 1.15);
+
+                        document.getElementById("score").innerHTML = score;
+                        document.getElementById("irelandcost").innerHTML = irelandCost;
+                        document.getElementById("irelands").innerHTML = irelands;
+                        updateScorePerSecond();
+                    }
+                }
+
+                function addToScore(amount) {
+                    score = score + amount;
+                    document.getElementById("score").innerHTML = score;
+                }
+
+                function updateScorePerSecond() {
+                    scorePerSecond = farmers + trowels * 5 + shovels * 8 + hoes * 10 + tractors * 20 + cropSprayers * 30 + cultivators * 40 + harvesters * 50 + fields * 100 + idahos * 150 + irelands * 200;
+                    document.getElementById("scorepersecond").innerHTML = scorePerSecond;
+                }
+
+                setInterval(function() {
+                    score = score + farmers;
+                    score = score + trowels * 5;
+                    score = score + shovels * 8;
+                    score = score + hoes * 10;
+                    score = score + tractors * 20;
+                    score = score + cropSprayers * 30;
+                    score = score + cultivators * 40;
+                    score = score + harvesters * 50;
+                    score = score + fields * 100;
+                    score = score + idahos * 150;
+                    score = score + irelands * 200;
+                    document.getElementById("score").innerHTML = score;
+                    document.title = score + " Potatoes - Potato Clicker ";
+                }, 1000); // 1000ms = 1 second
+            </script>
+            <img src="Potato.png" alt="Potato" onclick="addToScore(1)" />
+            <div class="sectionRight">
+            <div class="farmer">
+                <button onclick="buyFarmer()">Farmer [<span id="farmercost">15</span>] -- <span id="farmers">0</span></button>
+            </div>
+            <div class="trowel">
+                <button onclick="buyTrowel()">Trowel [<span id="trowelcost">50</span>] -- <span id="trowels">0</span></button>
+            </div>
+            <div class="shovel">
+                <button onclick="buyShovel()">Shovel [<span id="shovelcost">100</span>] -- <span id="shovels">0</span></button>
+            </div>
+            <div class="hoe">
+                <button onclick="buyHoe()">Hoe [<span id="hoecost">200</span>] -- <span id="hoes">0</span></button>
+            </div>
+            <div class="tractor">
+                <button onclick="buyTractor()">Tractor [<span id="tractorcost">350</span>] -- <span id="tractors">0</span></button>
+            </div>
+            <div class="cropSprayer">
+                <button onclick="buyCropSprayer()">Crop Sprayer [<span id="cropsprayercost">500</span>] -- <span id="cropsprayers">0</span></button>
+            </div>
+            <div class="cultivator">
+                <button onclick="buyCultivator()">Cultivator [<span id="cultivatorcost">800</span>] -- <span id="cultivators">0</span></button>
+            </div>
+            <div class="harvester">
+                <button onclick="buyHarvester()">Harvester [<span id="harvestercost">1000</span>] -- <span id="harvesters">0</span></button>
+            </div>
+            <div class="field">
+                <button onclick="buyField()">Field [<span id="fieldcost">10000</span>] -- <span id="fields">0</span></button>
+            </div>
+            <div class="idaho">
+                <button onclick="buyIdaho()">Idaho [<span id="idahocost">50000</span>] -- <span id="idahos">0</span></button>
+            </div>
+            <div class="ireland">
+                <button onclick="buyIreland()">Ireland [<span id="irelandcost">100000</span>] -- <span id="irelands">0</span></button>
+            </div>
+            </div>
+        </center>
+    </body>
+</html>
