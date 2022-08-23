@@ -21,7 +21,7 @@
             </h2>
 
             <div class="sectionRight">
-                <table class="shopButton" onclick="buyFarmer()">
+                <table class="shopFarmerButton" onclick="buyFarmer()">
                     <tr>
                         <td id="image"><img src="farmer.png" alt="farmer"></td>
                         <td id="nameAndCost">
@@ -43,38 +43,40 @@
                     width: 20%;
                 }
 
-                .shopButton{
+                .shopFarmerButton{
                     background-color: lightslategrey;
                     transition: all .2s ease-in-out;
                     border-radius: 10px;
                     width: 100%;
                     margin: 10px 0px 10px 0px;
+                    top: 120px;
+                    right:100px;
                 }
 
-                .shopButton hover{
+                .shopFarmerButton hover{
                     background-color: lightgrey;
                     transition: all ease-in-out;
                 }
 
-                .shopButton #image{
+                .shopFarmerButton #image{
                     width: 25%;
                 }
 
-                .shopButton img{
+                .shopFarmerButton img{
                     height: 64px;
                     width: 64px;
                 }
 
-                .shopButton #nameAndCost p{
+                .shopFarmerButton #nameAndCost p{
                     margin: 0px;
                     width: 60%;
                 }
 
-                .shopButton #nameAndCost p:first-of-type{
+                .shopFarmerButton #nameAndCost p:first-of-type{
                     font-size: 24px;
                 }
 
-                .shopButton #amount{
+                .shopFarmerButton #amount{
                     font-size: 48px;
                     color: #595959;
                     font-family: roboto;
@@ -367,9 +369,9 @@
             </script>
             <img src="Potato.png" alt="Potato" onclick="addToScore(1)" />
             <div class="sectionRight">
-            <div class="farmer">
+            <!--<div class="farmer">
                 <button onclick="buyFarmer()">Farmer [<span id="farmercost">30</span>] -- <span id="farmers">0</span></button>
-            </div>
+            </div>-->
             <div class="trowel">
                 <button onclick="buyTrowel()">Trowel [<span id="trowelcost">100</span>] -- <span id="trowels">0</span></button>
             </div>
