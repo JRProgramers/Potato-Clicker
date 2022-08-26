@@ -165,6 +165,9 @@
             </style>
             <script>
                 var score = 0;
+                
+                var potato = 0;
+                var potatoCost = 1000000000000000000;
 
                 var farmerCost = 30;
                 var farmers = 0;
@@ -342,10 +345,15 @@
                         updateScorePerSecond();
                     }
                 }
+                
+                function potatorain() {
+                    const potatorain = object.create(document.getElementById("potato"))
+                }
 
                 function addToScore(amount) {
                     score = score + amount;
                     document.getElementById("score").innerHTML = score;
+                    potatorain()
                 }
 
                 function updateScorePerSecond() {
@@ -369,7 +377,7 @@
                     document.title = score + " Potatoes - Potato Clicker ";
                 }, 1000); // 1000ms = 1 second
             </script>
-            <img src="Potato.png" alt="Potato" onclick="addToScore(1)" />
+            <img src="Potato.png" id="potato" alt="Potato" onclick="addToScore(1)" />
             <div class="sectionRight">
             <!--<div class="farmer">
                 <button onclick="buyFarmer()">Farmer [<span id="farmercost">30</span>] -- <span id="farmers">0</span></button>
