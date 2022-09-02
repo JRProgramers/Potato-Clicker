@@ -430,6 +430,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("farmercost").innerHTML = farmerCost;
                         document.getElementById("farmers").innerHTML = farmers;
+                        scorePerSecond = scorePerSecond + 1;
                         updateScorePerSecond();
                     }
                 }
@@ -443,6 +444,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("trowelcost").innerHTML = trowelCost;
                         document.getElementById("trowels").innerHTML = trowels;
+                        scorePerSecond = scorePerSecond + 10;
                         updateScorePerSecond();
                     }
                 }
@@ -456,6 +458,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("shovelcost").innerHTML = shovelCost;
                         document.getElementById("shovels").innerHTML = shovels;
+                        scorePerSecond = scorePerSecond + 18;
                         updateScorePerSecond();
                     }
                 }
@@ -469,6 +472,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("hoecost").innerHTML = hoeCost;
                         document.getElementById("hoes").innerHTML = hoes;
+                        scorePerSecond = scorePerSecond + 20;
                         updateScorePerSecond();
                     }
                 }
@@ -482,6 +486,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("tractorcost").innerHTML = tractorCost;
                         document.getElementById("tractors").innerHTML = tractors;
+                        scorePerSecond = scorePerSecond + 50;
                         updateScorePerSecond();
                     }
                 }
@@ -495,6 +500,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("cropsprayercost").innerHTML = cropSprayerCost;
                         document.getElementById("cropsprayers").innerHTML = cropSprayers;
+                        scorePerSecond = scorePerSecond + 100;
                         updateScorePerSecond();
                     }
                 }
@@ -508,6 +514,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("cultivatorcost").innerHTML = cultivatorCost;
                         document.getElementById("cultivators").innerHTML = cultivators;
+                        scorePerSecond = scorePerSecond + 500;
                         updateScorePerSecond();
                     }
                 }
@@ -521,6 +528,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("harvestercost").innerHTML = harvesterCost;
                         document.getElementById("harvesters").innerHTML = harvesters;
+                        scorePerSecond = scorePerSecond + 1000;
                         updateScorePerSecond();
                     }
                 }
@@ -535,6 +543,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("fieldcost").innerHTML = fieldCost;
                         document.getElementById("fields").innerHTML = fields;
+                        scorePerSecond = scorePerSecond + 2500;
                         updateScorePerSecond();
                     }
                 }
@@ -548,6 +557,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("idahocost").innerHTML = idahoCost;
                         document.getElementById("idahos").innerHTML = idahos;
+                        scorePerSecond = scorePerSecond + 418527;
                         updateScorePerSecond();
                     }
                 }
@@ -561,6 +571,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("irelandcost").innerHTML = irelandCost;
                         document.getElementById("irelands").innerHTML = irelands;
+                        scorePerSecond = scorePerSecond + 1949333;
                         updateScorePerSecond();
                     }
                 }
@@ -574,6 +585,7 @@
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("potatolandcost").innerHTML = potatolandCost;
                         document.getElementById("potatolands").innerHTML = potatolands;
+                        scorePerSecond = scorePerSecond + 5000000;
                         updateScorePerSecond();
                     }
                 }
@@ -588,7 +600,6 @@
                 }
 
                 function updateScorePerSecond() {
-                    scorePerSecond = farmers + trowels * 10 + shovels * 18 + hoes * 20 + tractors * 50 + cropSprayers * 100 + cultivators * 500 + harvesters * 1000 + potatoes + fields * 2500 + idahos * 418527 + irelands * 1949333 + potatolands * 5000000;
                     document.getElementById("scorepersecond").innerHTML = scorePerSecond;
                 }
                 
