@@ -7,7 +7,7 @@
             <title>
                 Potato Clicker
             </title>
-        
+       
         <link rel="icon" type="image" type="image/x-icon" href="favicon.ico">
            
     </head>
@@ -17,7 +17,7 @@
                 Potato Clicker
             </h1>
             <hr>
-            <div class="scoreContainer unselectable">
+            <div class="scoreContainer">
                 <h2>
                     <span id="score">0</span> Potatoes <br>
                     <span id="scorepersecond">0</span> Potatoes Per Second
@@ -26,7 +26,7 @@
 
             <div class="sectionRight">
                 <div class="farmer">
-                <table class="shopButton unselectable" onclick="buyFarmer()">
+                <table class="shopButton" onclick="buyFarmer()">
                     <tr>
                         <td id="image"><img src="Images/farmer.png" alt="farmer"></td>
                         <td id="nameAndCost">
@@ -38,7 +38,7 @@
                 </table>
                 </div>
                 <div class="trowel">
-                <table class="shopButton unselectable" onclick="buyTrowel()">
+                <table class="shopButton" onclick="buyTrowel()">
                     <tr>
                         <td id="image"><img src="Images/trowel.png" alt="trowel"></td>
                         <td id="nameAndCost">
@@ -50,7 +50,7 @@
                 </table>
                 </div>
                 <div class="shovel">
-                <table class="shopButton unselectable" onclick="buyShovel()">
+                <table class="shopButton" onclick="buyShovel()">
                     <tr>
                         <td id="image"><img src="Images/shovel.png" alt="shovel"></td>
                         <td id="nameAndCost">
@@ -62,7 +62,7 @@
                 </table>
                 </div>
                 <div class="hoe">
-                    <table class="shopButton unselectable" onclick="buyHoe()">
+                    <table class="shopButton" onclick="buyHoe()">
                     <tr>
                         <td id="image"><img src="Images/hoe.png" alt="hoe"></td>
                         <td id="nameAndCost">
@@ -74,7 +74,7 @@
                 </table>
                 </div>
                 <div class="tractor">
-                    <table class="shopButton unselectable" onclick="buyTractor()">
+                    <table class="shopButton" onclick="buyTractor()">
                     <tr>
                         <td id="image"><img src="Images/tractor.png" alt="tractor"></td>
                         <td id="nameAndCost">
@@ -86,7 +86,7 @@
                 </table>
                 </div>
                 <div class="cropSprayer">
-                    <table class="shopButton unselectable" onclick="buyCropSprayer()">
+                    <table class="shopButton" onclick="buyCropSprayer()">
                     <tr>
                         <td id="image"><img src="Images/cropsprayer.png" alt="cropsprayer"></td>
                         <td id="nameAndCost">
@@ -98,7 +98,7 @@
                 </table>
                 </div>
                 <div class="cultivator">
-                    <table class="shopButton unselectable" onclick="buyCultivator()">
+                    <table class="shopButton" onclick="buyCultivator()">
                     <tr>
                         <td id="image"><img src="Images/cultivator.png" alt="cultivator"></td>
                         <td id="nameAndCost">
@@ -110,7 +110,7 @@
                 </table>
                 </div>
                 <div class="harvester">
-                    <table class="shopButton unselectable" onclick="buyHarvester()">
+                    <table class="shopButton" onclick="buyHarvester()">
                     <tr>
                         <td id="image"><img src="Images/harvester.png" alt="harvester"></td>
                         <td id="nameAndCost">
@@ -124,7 +124,7 @@
             </div>
             <div class="sectionLeft">
                 <div class="field">
-                    <table class="shopButton unselectable" onclick="buyField()">
+                    <table class="shopButton" onclick="buyField()">
                     <tr>
                         <td id="image"><img src="Images/field.png" alt="field"></td>
                         <td id="nameAndCost">
@@ -136,7 +136,7 @@
                 </table>
                 </div>
                 <div class="idaho">
-                    <table class="shopButton unselectable" onclick="buyIdaho()">
+                    <table class="shopButton" onclick="buyIdaho()">
                     <tr>
                         <td id="image"><img src="Images/idaho.png" alt="idaho"></td>
                         <td id="nameAndCost">
@@ -148,7 +148,7 @@
                 </table>
                 </div>
                 <div class="ireland">
-                    <table class="shopButton unselectable" onclick="buyIreland()">
+                    <table class="shopButton" onclick="buyIreland()">
                     <tr>
                         <td id="image"><img src="Images/ireland.png" alt="ireland"></td>
                         <td id="nameAndCost">
@@ -160,7 +160,7 @@
                 </table>
                 </div>
                 <div class="potatoland">
-                    <table class="shopButton unselectable" onclick="buyPotatoland()">
+                    <table class="shopButton" onclick="buyPotatoland()">
                     <tr>
                         <td id="image"><img src="Images/potatoland.png" alt="potatoland"></td>
                         <td id="nameAndCost">
@@ -172,7 +172,7 @@
                 </table>
                 </div>
             </div>
-            
+           
             <div class="sectionLeft">
                 <div id="upgradeContainer"></div>
                 <div id="shopContainer"></div>
@@ -187,19 +187,19 @@
                     top: 120px;
                     width: 20%;
                 }
-                
+               
                 .sectionLeft{
                     left: 100px;
                     top: 150px;
                     width: 20%;
                 }
-                
+               
                 .sectionDown button{
                     background-color: darkgoldenrod;
                     top: 210px;
                 }
-                
-                .scoreContainer{
+               
+                .scoreContainer img{
                     background-color: lightslategrey;
                     width: 30%;
                     padding: 8px;
@@ -207,22 +207,15 @@
                     font-size: 18px;
                     font-weight: bold;
                 }
-                
+               
                 .clickerContainer img{
                     position: relative;
                     transition: all .2s ease-in-out;
                 }
-                
+               
                 .clickerContainer img:hover { transform: scale(1.10); }
                 .clickerContainer img:active { transform: scale(0.99); }
-                
-                .unselectable {
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                }
-                
+               
                 .resetGame button{
                     background-color: goldenrod;
                     position: absolute;
@@ -267,12 +260,12 @@
                     font-family: roboto;
                     width: 15%;
                 }
-                
+               
                 #upgradeContainer img{
                     height: 64px;
                     width: 64px;
                 }
-                
+               
                 .farmer{
                     background-color: slategrey;
                     position: absolute;
@@ -350,7 +343,7 @@
                     left: 80px;
                     top: 320px;
                 }
-                
+               
                 .potatoland{
                     background-color: slategrey;
                     position: absolute;
@@ -360,7 +353,7 @@
             </style>
             <script>
                 var score = 0;
-                
+               
                 var upgrade = {
                     name: [
                         ],
@@ -379,7 +372,7 @@
                     bonus: [
                         ],
                     purchased: [],
-                    
+                   
                     purchase: function(index) {
                     }
                 };
@@ -417,7 +410,7 @@
 
                 var irelandCost = 1000000000;
                 var irelands = 0;
-                
+               
                 var potatolandCost = 1000000000000000000;
                 var potatolands = 0;
 
@@ -564,20 +557,20 @@
                         updateScorePerSecond();
                     }
                 }
-                
+               
                 function buyPotatoland() {
                     if(score >= potatolandCost) {
                         score = score - potatolandCost;
                         potatolands = potatolands + 1;
                         potatolandCost = Math.round(potatolandCost * 1.15);
-                        
+                       
                         document.getElementById("score").innerHTML = score;
                         document.getElementById("potatolandcost").innerHTML = potatolandCost;
                         document.getElementById("potatolands").innerHTML = potatolands;
                         updateScorePerSecond();
                     }
                 }
-                
+               
                 function potatorain() {
                     const potatorain = object.create(document.getElementById("potato"))
                 }
@@ -588,14 +581,13 @@
                 }
 
                 function updateScorePerSecond() {
-                    scorePerSecond = farmers + trowels * 10 + shovels * 18 + hoes * 20 + tractors * 50 + cropSprayers * 100 + cultivators * 500 + harvesters * 1000 + potatoes + fields * 2500 + idahos * 418527 + irelands * 1949333 + potatolands * 5000000;
+                    scorePerSecond = farmers + trowels * 10 + shovels * 18 + hoes * 20 + tractors * 50 + cropSprayers * 100 + cultivators * 500 + harvesters * 1000 + fields * 2500 + idahos * 418527 + irelands * 1949333 + potatolands * 5000000000;
                     document.getElementById("scorepersecond").innerHTML = scorePerSecond;
                 }
-                
+               
                 function saveGame() {
                     var saveGame = {
                         score: score,
-                        clickingPower: clickingPower,
                         farmerCost: farmerCost,
                         farmers: farmers,
                         trowelCost: trowelCost,
@@ -621,47 +613,21 @@
                         potatolandCost: potatolandCost,
                         potatolands: potatolands
                     };
-                    localStorage.setItem("gameSave", JSON.stringify(gameSave));
+                    localStorage.setItem("saveGame", JSON.stringify(saveGame));
                 }
-                
+               
                 function loadGame() {
                     var savedGame = JSON.parse(localStorage.getItem("gameSave"));
-                    if (typeof savedGame.score !== "undefined") score = savedGame.score;
-                    if (typeof savedGame.clickingPower !== "undefined") clickingPower = savedGame.clickingPower;
-                    if (typeof savedGame.farmerCost !== "undefined") farmerCost = savedGame.farmerCost;
-                    if (typeof savedGame.farmers !== "undefined") farmers = savedGame.farmers;
-                    if (typeof savedGame.trowelCost !== "undefined") trowelCost = savedGame.trowelCost;
-                    if (typeof savedGame.trowels !== "undefined") trowels = savedGame.trowels;
-                    if (typeof savedGame.shovelCost !== "undefined") shovelCost = savedGame.shovelCost;
-                    if (typeof savedGame.shovels !== "undefined") shovels = savedGame.shovels;
-                    if (typeof savedGame.hoeCost !== "undefined") hoeCost = savedGame.hoeCost;
-                    if (typeof savedGame.hoes !== "undefined") hoes = savedGame.hoes;
-                    if (typeof savedGame.tractorCost !== "undefined") tractorCost = savedGame.tractorCost;
-                    if (typeof savedGame.tractors !== "undefined") tractors = savedGame.tractors;
-                    if (typeof savedGame.cropSprayerCost !== "undefined") cropSprayerCost = savedGame.cropSprayerCost;
-                    if (typeof savedGame.cropSprayers !== "undefined") cropSprayers = savedGame.cropSprayers;
-                    if (typeof savedGame.cultivatorCost !== "undefined") cultivatorCost = savedGame.cultivatorCost;
-                    if (typeof savedGame.cultivators !== "undefined") cultivators = savedGame.cultivators;
-                    if (typeof savedGame.harvesterCost !== "undefined") harvesterCost = savedGame.harvesterCost;
-                    if (typeof savedGame.harvesters !== "undefined") harvesters = savedGame.harvesters;
-                    if (typeof savedGame.fieldCost !== "undefined") fieldCost = savedGame.fieldCost;
-                    if (typeof savedGame.fields !== "undefined") fields = savedGame.fields;
-                    if (typeof savedGame.idahoCost !== "undefined") idahoCost = savedGame.idahoCost;
-                    if (typeof savedGame.idahos !== "undefined") idahos = savedGame.idahos;
-                    if (typeof savedGame.irelandCost !== "undefined") irelandCost = savedGame.irelandCost;
-                    if (typeof savedGame.irelands !== "undefined") irelands = savedGame.irelands;
-                    if (typeof savedGame.potatolandCost !== "undefined") potatolandCost = savedGame.potatolandCost;
-                    if (typeof savedGame.potatolands !== "undefined") potatolands = savedGame.potatolands;
                 }
-                
+               
                 function resetGame() {
                     if (confirm("Are you sure that you want to reset your game?")) {
                         var gameSave = {};
-                        localStorage.setItem("gameSave", JSON.stringify(gameSave));
+                        localStorage.setItem("saveGame", JSON.stringify(saveGame));
                         location.reload();
                     }
                 }
-                
+               
                 window.onload = function() {
                     loadGame();
                     updateScorePerSecond();
@@ -707,12 +673,14 @@
                     score = score + potatolands * 5000000000;
                     document.getElementById("score").innerHTML = score;
                     document.title = score + " Potatoes - Potato Clicker ";
+                    updateScorePerSecond();
                 }, 1000); // 1000ms = 1 second
-                
+               
                 setInterval(function() {
                     saveGame();
+                    updateScorePerSecond();
                 }, 30000); // 30000ms = 30 seconds
-                
+               
                 document.addEventListener("keydown", function(event) {
                     if (event.ctrlKey && event.which == 83) { // ctrl + s
                         event.preventDefault();
@@ -720,7 +688,7 @@
                     }
                 }, false);
             </script>
-            <div class="clickerContainer unselectable">
+            <div class="clickerContainer">
                 <img src="Images/Potato.png" id="potato" alt="Potato" onclick="addToScore(1)" />
             </div>
             <div class="sectionDown">
