@@ -7,9 +7,9 @@
             <title>
                 Potato Clicker
             </title>
-        
+       
         <link rel="icon" type="image" type="image/x-icon" href="favicon.ico">
-           
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <center>
@@ -200,198 +200,9 @@
                 <div id="upgradeContainer"></div>
                 <div id="shopContainer"></div>
             </div>
-            <style>
-                body{
-                    background-color: slategrey;
-                }
-
-                .sectionRight{
-                    right: 100px;
-                    top: 120px;
-                    width: 20%;
-                }
-                
-                .sectionLeft{
-                    left: 100px;
-                    top: 150px;
-                    width: 20%;
-                }
-                
-                .sectionDown button{
-                    background-color: darkgoldenrod;
-                    top: 210px;
-                }
-                
-                .scoreContainer img{
-                    background-color: lightslategrey;
-                    width: 30%;
-                    padding: 8px;
-                    border-radius: 8px;
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-                
-                .clickerContainer img{
-                    position: relative;
-                    transition: all .2s ease-in-out;
-                }
-                
-                .clickerContainer img:hover { transform: scale(1.10); }
-                .clickerContainer img:active { transform: scale(0.99); }
-                
-                .resetGame button{
-                    background-color: goldenrod;
-                    position: absolute;
-                    top: 30px;
-                    left: 50px;
-                }
-
-                .shopButton{
-                    background-color: lightslategrey;
-                    transition: all .2s ease-in-out;
-                    border-radius: 10px;
-                    width: 100%;
-                    margin: 10px 0px 10px 0px;
-                }
-
-                .shopButton hover{
-                    background-color: lightgrey;
-                    transition: all ease-in-out;
-                }
-
-                .shopButton #image{
-                    width: 25%;
-                }
-
-                .shopButton img{
-                    height: 64px;
-                    width: 64px;
-                }
-
-                .shopButton #nameAndCost p{
-                    margin: 0px;
-                    width: 60%;
-                }
-
-                .shopButton #nameAndCost p:first-of-type{
-                    font-size: 24px;
-                }
-
-                .shopButton #amount{
-                    font-size: 48px;
-                    color: #595959;
-                    font-family: roboto;
-                    width: 15%;
-                }
-                
-                #upgradeContainer img{
-                    height: 64px;
-                    width: 64px;
-                }
-                
-                .farmer{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 120px;
-                }
-           
-                 .trowel{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 220px;
-                }
-
-                .shovel{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 320px;
-                }
-           
-                .hoe{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 420px;
-                }
-           
-                .tractor{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 520px;
-                }
-           
-                .cropSprayer{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 620px;
-                }
-
-                .cultivator{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 720px;
-                }
-
-                .harvester{
-                    background-color: slategrey;
-                    position: absolute;
-                    right: 80px;
-                    top: 820px;
-                }
-
-
-                .field{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 120px;
-                }
-
-                .idaho{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 220px;
-                }
-
-                .ireland{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 320px;
-                }
-                
-                .potatoland{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 420px;
-                }
-                
-                .redPotato{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 520px;
-                }
-                
-                .goldenPotato{
-                    background-color: slategrey;
-                    position: absolute;
-                    left: 80px;
-                    top: 620px;
-                }
-            </style>
-            <script src="main.js">
-            </script>
+            <script src="main.js"></script>
             <div class="clickerContainer">
-                <img src="Images/Potato.png" id="potato" alt="Potato" onclick="addToScore(1)" />
+                <img src="Images/Potato.png" id="potato" alt="Potato" id="clicker" onclick="addToScore(1)"/>
             </div>
             <!--<div class="sectionDown">
                 <button onclick="potatorain()">Potato Rain</button>
@@ -399,7 +210,6 @@
             <div class="resetGame">
                 <button onclick="resetGame()">Reset Game</button>
             </div>
-            
         </center>
     </body>
 </html>
