@@ -1,5 +1,6 @@
 # Potato-Clicker
-We currently don't have a working link we'll add it when we have one
+Our link to the website is https://clickingpotatoes.000webhostapp.com/
+Thanks to 000webhostapp for creating the website
 
 To download it go to the green code button and then press download zip. Open index.html in the potato clicker folder to run the game!
 
