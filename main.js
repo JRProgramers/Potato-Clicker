@@ -41,54 +41,72 @@ var upgrade = {
         }
     };
 
+var newPrice = 0;
+
+
 var farmerCost = 15;
 var farmers = 0;
+var farmerPps = 1;
 
 var trowelCost = 100;
 var trowels = 0;
+var trowelPps = 10;
 
 var shovelCost = 250;
 var shovels = 0;
+var shovelPps = 18;
 
 var hoeCost = 500;
 var hoes = 0;
+var hoePps = 20;
 
 var tractorCost = 1000;
 var tractors = 0;
+var tractorPps = 50;
 
 var cropSprayerCost = 5000;
 var cropSprayers = 0;
+var cropSprayerPps = 100;
 
 var cultivatorCost = 10000;
 var cultivators = 0;
+var cultivatorPps = 500;
 
 var harvesterCost = 100000;
 var harvesters = 0;
+var harvesterPps = 1000;
 
 
 var fieldCost = 1000000;
 var fields = 0;
+var fieldPps = 2500;
 
 var idahoCost = 5000000;
 var idahos = 0;
+var idahoPps = 418527;
 
 var irelandCost = 1000000000;
 var irelands = 0;
+var irelandPps = 1949333;
 
 var potatolandCost = 1000000000000000;
 var potatolands = 0;
+var potatoLandPps = 5000000000;
 
 var redPotatoCost = 10000000000000000;
 var redPotatoes = 0;
+var redPotatoPps = 8000000000;
 
 var goldenPotatoCost = 100000000000000000;
 var goldenPotatoes = 0;
+var goldenPotatoPps = 10000000000;
+
 
 function buyFarmer() {
     if (score >= farmerCost) {
         score = score - farmerCost;
         farmers = farmers + 1;
-        farmerCost = Math.round(farmerCost * 1.15);
+        farmerCost = Math.round(priceChanger(farmerCost));
 
         document.getElementById("score").innerHTML = score;
         document.getElementById("farmercost").innerHTML = farmerCost;
@@ -277,8 +295,8 @@ function addToScore(amount) {
 }
 
 function updateScorePerSecond() {
-    scorePerSecond = farmers + trowels * 10 + shovels * 18 + hoes * 20 + tractors * 50 + cropSprayers * 100 + cultivators * 500 + harvesters * 1000 + fields * 2500 + idahos * 418527 + irelands * 1949333 + potatolands * 5000000000 + redPotatoes *
-8000000000 + goldenPotatoes * 10000000000;
+    scorePerSecond = farmers + trowels * trowelPps + shovels * shovelPps + hoes * hoePps + tractors * tractorPps + cropSprayers * cropSprayerPps + cultivators * cultivatorPps + harvesters * harvesterPps + fields * fieldPps + idahos * idahoPps + irelands * irelandPps + potatolands * potatoLandPps + redPotatoes *
+redPotatoPps + goldenPotatoes * goldenPotatoPps;
     document.getElementById("scorepersecond").innerHTML = scorePerSecond;
 }
 
@@ -434,19 +452,19 @@ window.onload = function() {
 
 setInterval(function() {
     score = score + farmers;
-    score = score + trowels * 10;
-    score = score + shovels * 18;
-    score = score + hoes * 20;
-    score = score + tractors * 50;
-    score = score + cropSprayers * 100;
-    score = score + cultivators * 500;
-    score = score + harvesters * 1000;
-    score = score + fields * 2500;
-    score = score + idahos * 418527;
-    score = score + irelands * 1949333;
-    score = score + potatolands * 5000000000;
-    score = score + redPotatoes * 10000000000;
-    score = score + goldenPotatoes * 100000000000;
+    score = score + trowels * trowelPps;
+    score = score + shovels * shovelPps;
+    score = score + hoes * hoePps;
+    score = score + tractors * tractorPps;
+    score = score + cropSprayers * cropSprayerPps;
+    score = score + cultivators * cultivatorPps;
+    score = score + harvesters * harvesterPps;
+    score = score + fields * fieldPps;
+    score = score + idahos * idahoPps;
+    score = score + irelands * irelandPps;
+    score = score + potatolands * potatoLandPps;
+    score = score + redPotatoes * redPotatoPps;
+    score = score + goldenPotatoes * goldenPotatoPps;
     document.getElementById("score").innerHTML = score;
     document.title = score + " Potatoes - Potato Clicker ";
     updateScorePerSecond();
