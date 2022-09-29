@@ -106,11 +106,11 @@ function buyFarmer() {
     if (score >= farmerCost) {
         score = score - farmerCost;
         farmers = farmers + 1;
-        farmerCost = Math.round(priceChanger(farmerCost));
+        farmerCost = Math.round(farmerCost * 1.15);
 
         document.getElementById("score").innerHTML = score;
         document.getElementById("farmercost").innerHTML = farmerCost;
-        document.getElementById("farmers").innerHTML = farmers;
+        document.getElementById("farmers").innerHTML =  farmers;
         updateScorePerSecond();
     }
 }
@@ -287,11 +287,14 @@ function buyGoldenPotato() {
 
 function potatorain() {
     const potatorain = object.create(document.getElementById("potato"))
+    const potatorainLocation = Math.floor(Math.random * window.screen.width())
+    const screenHeight = screen.height()
 }
 
 function addToScore(amount) {
     score = score + amount;
     document.getElementById("score").innerHTML = score;
+    potatorain()
 }
 
 function updateScorePerSecond() {
