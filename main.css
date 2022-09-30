@@ -1,6 +1,35 @@
+/*==============================================================
+                               Main
+==============================================================*/
+
 body{
     background-color: slategrey;
 }
+
+.vl {
+    border-right: 2px solid goldenrod;
+    border-left: 1px solid lightslategrey;
+    height: 915px;
+    position: absolute;
+    right: 27%;
+    margin-left: -3px;
+    top: 0;
+}
+
+hr{
+    border-top: 3px solid goldenrod;
+}
+
+.scroll-bar {
+    height: 100%;
+    width: 500px;
+    border: 1px solid grey;
+    overflow: auto;
+}
+
+/*==============================================================
+                             Sections
+==============================================================*/
 
 .sectionRight{
     right: 100px;
@@ -19,6 +48,10 @@ body{
     top: 210px;
 }
 
+/*==============================================================
+                             Containers
+==============================================================*/
+
 .scoreContainer img{
     background-color: lightslategrey;
     width: 30%;
@@ -36,12 +69,25 @@ body{
 .clickerContainer img:hover { transform: scale(1.10); }
 .clickerContainer img:active { transform: scale(0.99); }
 
+#upgradeContainer img{
+    height: 64px;
+    width: 64px;
+}
+
+/*==============================================================
+                             Buttons
+==============================================================*/
+
 .resetGame button{
     background-color: goldenrod;
     position: absolute;
-    top: 30px;
-    left: 50px;
+    top: 40px;
+    left: 60px;
 }
+
+/*==============================================================
+                           Shop Buttons
+==============================================================*/
 
 .shopButton{
     background-color: lightslategrey;
@@ -81,10 +127,9 @@ body{
     width: 15%;
 }
 
-#upgradeContainer img{
-    height: 64px;
-    width: 64px;
-}
+/*==============================================================
+                            Buildings
+==============================================================*/
 
 .farmer{
     background-color: slategrey;
@@ -185,7 +230,94 @@ body{
     top: 620px;
 }
 
-#upgradeContainer img{
-    height: 64px;
-    width: 64px;
+.radioactivePotato{
+    background-color: slategrey;
+    position: absolute;
+    left: 80px;
+    top: 750px;
+}
+
+.jacob{
+    background-color: slategrey;
+    position: absolute;
+    left: 80px;
+    top: 880px;
+}
+
+/*==============================================================
+                             Upgrades
+==============================================================*/
+
+.redBull{
+    background-color: lightslategrey;
+    right: 320px;
+    top: 5px;
+    width: 10%;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    margin: 10px 0px 10px 0px;
+    border-radius: 80%;
+}
+
+/*==============================================================
+                           Farm Name
+==============================================================*/
+
+#farmNameAnchor {
+	position:absolute;
+	left:0px;
+	top:10%;
+	width:100%;
+	z-index:200;
+}
+
+#farmName {
+	position:absolute;
+	left:0px;
+	bottom:8px;
+	left:12.5%;
+	width:75%;
+	text-align:center;
+	font-size:20px;
+	background:#000;
+	background:rgba(0,0,0,0.4);
+	border-radius:12px;
+	padding:4px 0px;
+	cursor:pointer;
+}
+
+#farmName:hover {
+	text-shadow:0px 0px 8px #fff;
+}
+
+/*==============================================================
+                           AdsByLogan
+==============================================================*/
+
+.sponsor {
+    position: absolute;
+    left: 300px;
+    top: 0px;
+}
+
+.adsByLogan input{
+    background-color: seagreen;
+    position: absolute;
+    left: 260px;
+    top: 55px;
+}
+
+.branch1 img{
+    position: absolute;
+    left: 195px;
+    top: 52px;
+    width: 5%;
+}
+
+.branch2 img{
+    position: absolute;
+    left: 445px;
+    top: 52px;
+    width: 5%;
 }
