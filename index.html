@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+            <!-- ============================================================
+                                           Main
+            ==============================================================-->
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,23 +12,38 @@
             </title>
        
         <link rel="icon" type="image" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <center>
             <h1>
                 Potato Clicker
             </h1>
+            <br>
             <hr>
+            
+            <div class="vl"></div>
+            
+            <!-- ============================================================
+                                          Score
+            ==============================================================-->
+            
             <div class="scoreContainer">
                 <h2>
                     <span id="score">0</span> Potatoes <br>
                     <span id="scorepersecond">0</span> Potatoes Per Second
                 </h2>
             </div>
-
-            <div class="sectionRight">
-                <div class="farmer">
+            
+            <!-- ============================================================
+                                        Shop Buttons
+            ==============================================================-->
+            
+            <div id="sectionLeft" class="inset">
+                <div id="bakeryNameAnchor"><div id="bakeryName" class="title"></div></div>
+            </div>
+            <div class="scroll-bar">
+            <div class="farmer">
                 <table class="shopButton" onclick="buyFarmer()">
                     <tr>
                         <td id="image"><img src="Images/farmer.png" alt="farmer"></td>
@@ -196,19 +214,79 @@
                     </tr>
                 </table>
             </div>
+            <div class="radioactivePotato">
+                <table class="shopButton" onclick="buyRadioactivePotato()">
+                    <tr>
+                        <td id="image"><img src="Images/radioactive-potato.png" alt="radioactive potato"><td>
+                        <td id="nameAndCost">
+                            <p>Radioactive Potato</p>
+                            <p><span id="radioactivepotatocost">1,000,000,000,000,000,000</span> Potatoes</p>
+                        </td>
+                        <td id="amount"><span id="radioactivepotatoes">0</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="jacob">
+                <table class="shopButton" onclick="buyJacob()">
+                    <tr>
+                        <td id="image"><img src="Images/jacob.png" alt="jacob"><td>
+                        <td id="nameAndCost">
+                            <p>Jacob</p>
+                            <p><span id="jacobcost">10,000,000,000,000,000,000</span> Potatoes</p>
+                        </td>
+                        <td id="amount"><span id="jacobs">0</span></td>
+                    </tr>
+                </table>
+            </div>
             <div class="sectionLeft">
                 <div id="upgradeContainer"></div>
                 <div id="shopContainer"></div>
             </div>
+            
+            <!-- ============================================================
+                                          Potato
+            ==============================================================-->
+            
             <script src="main.js"></script>
             <div class="clickerContainer">
-                <img src="Images/Potato.png" id="potato" alt="Potato" id="clicker" onclick="addToScore(1)"/>
+                <img src="Images/Potato.png" id="potato" alt="Potato" class="clicker" onclick="addToScore(1)"/>
             </div>
+            
+            <!-- ============================================================
+                                          Buttons
+            ==============================================================-->
+            
             <!--<div class="sectionDown">
                 <button onclick="potatorain()">Potato Rain</button>
             </div>-->
             <div class="resetGame">
                 <button onclick="resetGame()">Reset Game</button>
+            </div>
+            
+            <!-- ============================================================
+                                           Upgrades
+            ==============================================================-->
+            <!--
+            <div class="redBull">
+                <button onclick="index(0)"><img src="Images/red-bull.png" alt="Red Bull" height="40" width="40"></button>
+            </div>
+            -->
+            <!-- ============================================================
+                                         AdsByLogan
+            ==============================================================-->
+            
+            <div class="sponsor">
+                <h4>Sponsored By: </h4>
+            </div>
+            <div class="adsByLogan">
+                <input type=button onClick="parent.open('https://docs.google.com/forms/d/e/1FAIpQLSeF4YtkFX8gNqQHqdUzUlLhlEsr-uK9CLTq-LD1b57YAvMbjw/viewform?pli=1')" 
+                value='Branching Out - Quality Pens' >
+            </div>
+            <div class="branch1">
+                <img src="AdsByLogan Images/branch.png" id="branch" alt="Branch"/>
+            </div>
+            <div class="branch2">
+                <img src="AdsByLogan Images/branch(2).png" id="branch" alt="Branch"/>
             </div>
         </center>
     </body>
